@@ -30,5 +30,5 @@ IMAGE_INSTALL_append += "iproute2"
 IMAGE_INSTALL_append += "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'init-ifupdown', 'dhcp-client', d)}"
 
 # Add some debugging tools to the image
-IMAGE_INSTALL_append += "tcpdump strace ldd"
+IMAGE_INSTALL_append += "strace ldd"
 
