@@ -1,4 +1,4 @@
-# Copyright 2020 Will Page <compenguy@gmail.com>. All rights reserved.
+# Copyright 2020 Will Page <compenguy@gmail.com>
 # SPDX-License-Identifier: MIT
 
 IMAGE_INSTALL += "packagegroup-core-full-cmdline-utils"
