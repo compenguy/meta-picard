@@ -3,8 +3,6 @@
 
 inherit core-image
 
-inherit features_check
-
 IMAGE_FEATURES += "read-only-rootfs"
 
 IMAGE_FEATURES += "ssh-server-openssh"
