@@ -8,19 +8,21 @@ inherit cargo
 # how to get carbleurator could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/carbleurator/0.1.0"
 SRC_URI += "git://git@github.com/compenguy/carbleurator.git;protocol=ssh;nobranch=1"
-SRCREV = "0ecc31496870c6b307bc59b6cecf7cc6f154c51d"
+SRCREV = "ee42fc38c9f033cf1ccdbe18c4c76193d6f10141"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV_append = ".AUTOINC+0ecc314968"
+PV_append = ".AUTOINC+ee42fc38c9"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
 SRC_URI += " \
     crate://crates.io/addr2line/0.12.2 \
     crate://crates.io/adler32/1.1.0 \
+    crate://crates.io/aho-corasick/0.7.13 \
     crate://crates.io/anyhow/1.0.31 \
     crate://crates.io/async-std/1.6.2 \
     crate://crates.io/async-task/3.0.0 \
+    crate://crates.io/atty/0.2.14 \
     crate://crates.io/autocfg/1.0.0 \
     crate://crates.io/backtrace/0.3.49 \
     crate://crates.io/base-x/0.2.6 \
@@ -43,6 +45,7 @@ SRC_URI += " \
     crate://crates.io/crossbeam-utils/0.7.2 \
     crate://crates.io/discard/1.0.4 \
     crate://crates.io/enum_primitive/0.1.1 \
+    crate://crates.io/env_logger/0.7.1 \
     crate://crates.io/failure/0.1.8 \
     crate://crates.io/failure_derive/0.1.8 \
     crate://crates.io/fastrand/1.3.2 \
@@ -62,6 +65,7 @@ SRC_URI += " \
     crate://crates.io/gimli/0.21.0 \
     crate://crates.io/gloo-timers/0.2.1 \
     crate://crates.io/hermit-abi/0.1.14 \
+    crate://crates.io/humantime/1.3.0 \
     crate://crates.io/io-kit-sys/0.1.0 \
     crate://crates.io/itoa/0.4.6 \
     crate://crates.io/js-sys/0.3.41 \
@@ -97,8 +101,11 @@ SRC_URI += " \
     crate://crates.io/pin-utils/0.1.0 \
     crate://crates.io/pkg-config/0.3.17 \
     crate://crates.io/proc-macro2/1.0.18 \
+    crate://crates.io/quick-error/1.2.3 \
     crate://crates.io/quote/1.0.7 \
     crate://crates.io/redox_syscall/0.1.56 \
+    crate://crates.io/regex-syntax/0.6.18 \
+    crate://crates.io/regex/1.3.9 \
     crate://crates.io/rustc-demangle/0.1.16 \
     crate://crates.io/rustc_version/0.2.3 \
     crate://crates.io/rusty-xinput/1.2.0 \
@@ -121,8 +128,10 @@ SRC_URI += " \
     crate://crates.io/stdweb/0.4.20 \
     crate://crates.io/syn/1.0.33 \
     crate://crates.io/synstructure/0.12.4 \
+    crate://crates.io/termcolor/1.1.0 \
     crate://crates.io/thiserror-impl/1.0.20 \
     crate://crates.io/thiserror/1.0.20 \
+    crate://crates.io/thread_local/1.0.1 \
     crate://crates.io/unicode-xid/0.2.1 \
     crate://crates.io/uuid/0.8.1 \
     crate://crates.io/vec_map/0.8.2 \
@@ -138,6 +147,7 @@ SRC_URI += " \
     crate://crates.io/web-sys/0.3.41 \
     crate://crates.io/wepoll-sys-stjepang/1.0.6 \
     crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
+    crate://crates.io/winapi-util/0.1.5 \
     crate://crates.io/winapi-x86_64-pc-windows-gnu/0.4.0 \
     crate://crates.io/winapi/0.3.9 \
     crate://crates.io/winrt/0.6.0 \
