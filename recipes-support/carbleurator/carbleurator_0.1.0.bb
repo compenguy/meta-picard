@@ -8,10 +8,10 @@ inherit cargo
 # how to get carbleurator could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/carbleurator/0.1.0"
 SRC_URI += "git://git@github.com/compenguy/carbleurator.git;protocol=ssh;nobranch=1"
-SRCREV = "9fc13ce27bdf7f97c5d5ff73dd93c3ede55451cf"
+SRCREV = "ac3f7dae62cb09c358c0cb060737044677ecf0d4"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV_append = ".AUTOINC+9fc13ce27b"
+PV_append = ".AUTOINC+ac3f7dae62"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
