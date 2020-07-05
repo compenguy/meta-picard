@@ -24,7 +24,7 @@ RPI_EXTRA_CONFIG = '\n\
   boot_delay=0\n\
   dtoverlay=pi3-disable-wifi\n\
   # Overclock the SD card from 50 to 100MHz\n\
-  # this can only be done with at least a UHS Class 1 card
+  # this can only be done with at least a UHS Class 1 card\n\
   dtoverlay=sdtweak,overclock_50=100\n\
   '
 
