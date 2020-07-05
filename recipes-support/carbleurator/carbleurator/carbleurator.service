@@ -1,9 +1,10 @@
 [Unit]
 Description=carbleurator RC car control daemon
+After=bluetooth.service
+Requires=bluetooth.service
 
 [Service]
 ExecStart=/usr/bin/carbleurator
 
 [Install]
-Wants=bluetooth.service
 WantedBy=basic.target
