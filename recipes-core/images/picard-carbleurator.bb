@@ -18,6 +18,14 @@ RPI_EXTRA_CONFIG = '\n\
   # Disable triggers for LEDs\n\
   dtparam=act_led_trigger=none\n\
   dtparam_pwd_led_trigger=none\n\
+  \n\
+  # Some boot speed enhancements\n\
+  disable_splash=1\n\
+  boot_delay=0\n\
+  dtoverlay=pi3-disable-wifi\n\
+  # Overclock the SD card from 50 to 100MHz\n\
+  # this can only be done with at least a UHS Class 1 card
+  dtoverlay=sdtweak,overclock_50=100\n\
   '
 
 IMAGE_ROOTFS_SIZE = "16384"
