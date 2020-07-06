@@ -5,8 +5,13 @@ After=systemd-udevd.service
 After=dbus.service
 Requires=bluetooth.service
 Requires=systemd-udevd.service
+StartLimitBurst=5
+StartLimitIntervalSec=60s
+StartLimitAction=poweroff
 
 [Service]
+Restart=on-failure
+RestartSec=500ms
 ExecStart=/usr/bin/carbleurator
 
 [Install]
