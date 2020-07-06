@@ -10,7 +10,7 @@ do_deploy_append_raspberrypi3-64() {
     echo "# have a properly sized image" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "disable_overscan=1" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
-    echo "# Enable audio (loads snd_bcm2835)" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "# Disable audio (loads snd_bcm2835)" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "dtparam=audio=off" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
     echo "# Disable triggers for LEDs" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
@@ -18,6 +18,7 @@ do_deploy_append_raspberrypi3-64() {
     echo "dtparam=pwr_led_trigger=none" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "# Some boot speed enhancements" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "initial_turbo=20" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "disable_splash=1" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "boot_delay=0" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "dtoverlay=pi3-disable-wifi" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
