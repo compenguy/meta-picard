@@ -1,9 +1,10 @@
 [Unit]
 Description=carbleurator RC car control daemon
 After=bluetooth.service
-After=systemd-udevd.service
-After=dbus.service
 Requires=bluetooth.service
+After=hciuart.service
+Requires=hciuart.service
+After=systemd-udevd.service
 Requires=systemd-udevd.service
 StartLimitBurst=5
 StartLimitIntervalSec=60s
