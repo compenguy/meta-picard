@@ -17,7 +17,8 @@ GPU_MEM = "16"
 RPI_EXTRA_CONFIG = '\n\
   # Disable triggers for LEDs\n\
   dtparam=act_led_trigger=none\n\
-  dtparam_pwd_led_trigger=none\n\
+  dtparam=pwr_led_trigger=none\n\
+  dtparam=audio=off\n\
   \n\
   # Some boot speed enhancements\n\
   disable_splash=1\n\
