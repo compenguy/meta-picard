@@ -19,14 +19,14 @@ IMAGE_LINGUAS = "en-us"
 KERNELDEPMODDEPEND = ""
 
 # This is an opkg-based distro
-IMAGE_INSTALL_append += "opkg"
+IMAGE_INSTALL:append = "opkg"
 
 # Sets the appropriate network configuration and tools
-IMAGE_INSTALL_append += "iproute2"
+IMAGE_INSTALL:append = "iproute2"
 # If systemd enabled, add init-ifupdown for the /etc/network/interfaces file
 # If systemd disabled, depend on dhcp-client
-IMAGE_INSTALL_append += "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'init-ifupdown', 'dhcp-client', d)}"
+IMAGE_INSTALL:append = "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'init-ifupdown', 'dhcp-client', d)}"
 
 # Add some debugging tools to the image
-IMAGE_INSTALL_append += "strace ldd"
+IMAGE_INSTALL:append = "strace ldd"
 

@@ -1,6 +1,6 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-CMDLINE_append += " quiet "
+CMDLINE:append = " quiet "
 
 SRC_URI += "file://filesystems.cfg"
 SRC_URI += "file://media.cfg"
