@@ -44,7 +44,7 @@
 #MACHINE ?= "genericx86-64"
 #
 # This sets the default machine to be a common, easily available board model
-MACHINE ??= "raspberrypi3-64"
+MACHINE ??= "raspberrypi3"
 
 #
 # Where to place downloads
