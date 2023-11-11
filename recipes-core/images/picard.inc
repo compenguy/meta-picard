@@ -13,20 +13,14 @@ IMAGE_INSTALL += "${@bb.utils.contains('DISTRO_FEATURES', 'ptest', 'ptest-runner
 
 IMAGE_INSTALL += "packagegroup-base"
 IMAGE_INSTALL += "packagegroup-core-boot"
+IMAGE_INSTALL += "carbleurator"
 IMAGE_INSTALL += "${CORE_IMAGE_EXTRA_INSTALL}"
 
 IMAGE_LINGUAS = "en-us"
 KERNELDEPMODDEPEND = ""
 
 # This is an opkg-based distro
-IMAGE_INSTALL:append = "opkg"
-
-# Sets the appropriate network configuration and tools
-IMAGE_INSTALL:append = "iproute2"
-# If systemd enabled, add init-ifupdown for the /etc/network/interfaces file
-# If systemd disabled, depend on dhcp-client
-IMAGE_INSTALL:append = "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'init-ifupdown', 'dhcp-client', d)}"
+IMAGE_INSTALL:append = " opkg"
 
 # Add some debugging tools to the image
-IMAGE_INSTALL:append = "strace ldd"
-
+IMAGE_INSTALL:append = " strace ldd"
